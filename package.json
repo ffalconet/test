@@ -9,7 +9,7 @@
     "dev": "concurrently 'npm:dev:frontend' 'npm:dev:backend'",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "concurrently 'npm:dev:frontend' 'npm:dev:backend'"
+    "start": "'npm:dev:frontend'"
   },
   "author": "",
   "license": "ISC",
