@@ -9,6 +9,7 @@
     "dev": "concurrently 'npm:dev:frontend' 'npm:dev:backend'",
     "build": "vite build",
     "preview": "vite preview",
+    "host": "vite --host",
     "start": "npm run 'dev:frontend'"
   },
   "author": "",
