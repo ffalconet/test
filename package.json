@@ -10,7 +10,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "host": "vite --host",
-    "start": "npm run 'dev:frontend'"
+    "start": "concurrently 'npm:dev:frontend' 'npm:dev:backend'"
   },
   "author": "",
   "license": "ISC",
