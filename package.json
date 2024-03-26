@@ -6,7 +6,7 @@
   "scripts": {
     "dev:frontend": "vite --host",
     "dev:backend": "nodemon server/index.js",
-    "dev": "serve -d dist && nodemon server/index.js",
+    "dev": "concurrently 'serve -d dist' 'npm:dev:backend'",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "host": "vite --host",
@@ -14,6 +14,7 @@
     "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
     "start": "serve -s dist"
   },
+  "concurrently 'npm:dev:frontend' 'npm:dev:backend'",
   "author": "",
   "license": "ISC",
   "dependencies": {
