@@ -4,10 +4,10 @@
   "description": "api to create a sandbox merchant",
   "main": "index.js",
   "scripts": {
-    "dev:frontend": "vite --host",
+    "dev:frontend": "vite",
     "dev:backend": "nodemon server/index.js",
     "dev": "concurrently 'npm:dev:frontend' 'npm:dev:backend'",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "host": "vite --host",
     "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
