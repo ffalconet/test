@@ -559,6 +559,7 @@ export default {
         this.error = 'Please indicate a Client ID';
         return;
       }
+      console.log('process.env.PORT', process.env.PORT)
 
       this.isLoading = true;
       await axios
@@ -607,6 +608,7 @@ export default {
           }
         })
         .catch((error) => {
+          console.log(error);
           this.Entity = []
           this.errorType = 'ERROR';
           this.color = 'bg-red-500';
