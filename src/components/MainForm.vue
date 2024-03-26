@@ -559,14 +559,13 @@ export default {
         this.error = 'Please indicate a Client ID';
         return;
       }
-      console.log('process.env.PORT', process.env.PORT)
 
       this.isLoading = true;
       await axios
         .request({
           method: 'POST',
           maxBodyLength: Infinity,
-          url: "http://127.0.0.1:" + process.env.PORT+ "/CatAPI/GetMerchantConf",
+          url: "https://cat-helper-c2ac8eba2286.herokuapp.com/CatAPI/GetMerchantConf",
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
