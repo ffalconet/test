@@ -6,13 +6,13 @@
   "scripts": {
     "dev:frontend": "vite --host",
     "dev:backend": "nodemon server/index.js",
-    "dev": "concurrently 'npm:dev:frontend' 'npm:dev:backend'",
+    "dev": "concurrently 'serve -d dist' 'npm:dev:backend'",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "host": "vite --host",
     "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
-  "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
-    "start": "npm run 'dev:frontend'"
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
+    "start": "serve -s dist"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "morgan": "^1.10.0",
     "postcss": "^8.4.32",
     "primevue": "^3.46.0",
+    "serve": "^14.2.1",
     "tailwindcss": "^3.3.6",
     "vue": "^3.3.4",
     "vue-loading-overlay": "^6.0.3",
