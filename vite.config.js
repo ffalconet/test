@@ -9,6 +9,15 @@ export default defineConfig({
     outDir: '../dist',
   },
   plugins: [vue()],
-  server: { fs: { deny: ['.env', '.env.*', '*.{crt,pem}', 'custom.secret'] } }
+  server: { 
+    fs: { deny: ['.env', '.env.*', '*.{crt,pem}', 'custom.secret'] },
+    proxy: {
+      '/CatAPI': {
+        target: 'http://localhost:5000', // Change this to your backend URL
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/CatAPI/, '')
+      }
+    }
+  }
 })
 
