@@ -565,7 +565,7 @@ export default {
         .request({
           method: 'POST',
           maxBodyLength: Infinity,
-          url: "http://127.0.0.1:4000/CatAPI/GetMerchantConf",
+          url: "http://127.0.0.1:" + process.env.PORT+ "/CatAPI/GetMerchantConf",
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
