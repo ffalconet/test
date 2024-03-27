@@ -19,6 +19,7 @@ function ErrorHandling(err) {
             return finalresult
         }
         else if (err.code === "ECONNABORTED") {
+            console.log(err);
             console.log("Warn error :", err.code)
             finalresult = { "Error_type": "Timeout", "status": 500, "Message": "Timeout, please check your internet connection / VPN connection" }
             return finalresult
