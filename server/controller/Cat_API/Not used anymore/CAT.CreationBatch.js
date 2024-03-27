@@ -289,6 +289,7 @@ async function Createconf(body) {
         }
       }
       else {
+        console.log(err);
         finalresult = { "EntityID": "Connection Error", "status": 500, "Message": "Check you VPN connection" }
         return finalresult
       }
